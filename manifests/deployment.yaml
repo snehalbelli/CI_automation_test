@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: cicdtest
+  name: cicdtest
+  namespace: test
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: cicdtest
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: cicdtest
+    spec:
+      containers:
+      - image: vinod2357/ci_cd_test:latest 
+        imagePullPolicy: IfNotPresent
+        name: ci_cd_test_cl4nm
+        resources:
+          requests:
+            cpu: 50m
+            memory: 256Mi
+status: {}

@@ -3,5 +3,5 @@ data:
   version: 3.8
 kind: ConfigMap
 metadata:
-  name: python-version
+  name: cicdtest
   namespace: test
