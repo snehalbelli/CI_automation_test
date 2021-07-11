@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: cicdtest
+  name: cicdtest
+  namespace: test
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: cicdtest
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: cicdtest
+    spec:
+      containers:
+      - image: vinod2357/ci_cd_test:v1.0.0
+        name: ci-cd-test-cl4nm
+        resources: {}
+status: {}

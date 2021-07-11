@@ -1,0 +1,33 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2021-07-06T18:35:51Z"
+    labels:
+      app: cicdtest
+    name: cicdtest
+    namespace: test
+    resourceVersion: "77868"
+    uid: 40c9a3da-d2b4-4777-845c-97390771fe87
+  spec:
+    clusterIP: 10.43.248.85
+    clusterIPs:
+    - 10.43.248.85
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 5000
+      protocol: TCP
+      targetPort: 5000
+    selector:
+      app: cicdtest
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
