@@ -24,7 +24,7 @@ spec:
       containers:
       - image: vinod2357/ci_cd_test:latest 
         imagePullPolicy: IfNotPresent
-        name: ci_cd_test_cl4nm
+        name: cicdtestcl4nm
         resources:
           requests:
             cpu: 50m
