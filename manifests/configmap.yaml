@@ -1,6 +1,6 @@
-piVersion: v1
+apiVersion: v1
 data:
-  version: 3.8
+  version: alpinev1
 kind: ConfigMap
 metadata:
   name: cicdtest
