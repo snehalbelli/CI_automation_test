@@ -1,0 +1,10 @@
+apiVersion: v1
+name: python-flask-app
+description: Install a Python HelloWorld deployment
+keywords:
+- python
+- helloworld 
+version: 1.0.0
+maintainers:
+- name: raita0100 
+  email: raita0100@xyz.com

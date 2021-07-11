@@ -1,0 +1,8 @@
+namespace:
+  name: test
+ 
+image:
+  repository: vinod2357/ci_cd_test
+  tag: latest
+
+replicaCount: 3
