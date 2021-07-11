@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: ci_cd_test
+  name: ci_cd_test
+  namespace: default 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ci_cd_test
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: ci_cd_test
+    spec:
+      containers:
+      - image: vinod2357/ci_cd_test:latest 
+        imagePullPolicy: IfNotPresent
+        name: ci_cd_test
+        resources:
+          requests:
+            cpu: 50m
+            memory: 256Mi
