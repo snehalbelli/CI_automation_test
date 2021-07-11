@@ -1,0 +1,7 @@
+piVersion: v1
+data:
+  version: 3.8
+kind: ConfigMap
+metadata:
+  name: python-version
+  namespace: test
