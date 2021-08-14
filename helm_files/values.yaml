@@ -5,4 +5,4 @@ image:
   repository: vinod2357/ci_cd_test
   tag: latest
 
-replicaCount: 5
+replicaCount: 3
