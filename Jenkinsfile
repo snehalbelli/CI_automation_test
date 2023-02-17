@@ -5,7 +5,6 @@ pipeline{
             steps{
                 sh "rm -rf CI_automation_test"
                 sh "git clone https://github.com/snehalbelli/CI_automation_test.git"
-                sh "whoami"
             }
             
         
