@@ -13,14 +13,14 @@ pipeline{
         stage("build image"){
             steps{
                 dir("CI_automation_test"){
-                    sh "sudo docker build -t greet:v2 ."
-                    sh "sudo docker tag greet:v2 snehalbelli/practice:v2"
+                    sh "sudo docker build -t greet:v3 ."
+                    sh "sudo docker tag greet:v3 snehalbelli/practice:v3"
                 }
                 }
         }
         stage("push image"){
             steps{
-                sh "sudo docker push snehalbelli/practice:v2"
+                sh "sudo docker push snehalbelli/practice:v3"
             }
         }
     }
