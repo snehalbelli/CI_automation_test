@@ -3,15 +3,17 @@ pipeline{
     stages{
         stage("clone repo"){
             steps{
-                sh "git --version"
+                sh "git clone https://github.com/snehalbelli/CI_automation_test.git"
             }
             
         
         }
         stage("build image"){
             steps{
-                sh "docker --version"
-            }
+                dir("CI_automation_test"){
+                    sh "ls -al"
+                }
+                }
         }
         stage("push image"){
             steps{
